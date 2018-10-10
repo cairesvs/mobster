@@ -87,10 +87,7 @@ export class DisplayManager {
     let displays: Electron.Display[] = screen
       .getAllDisplays()
       .filter(display => display.id !== screen.getPrimaryDisplay().id)
-    this.secondaryWindows = displays.map(display =>
-      this.createSecondaryWindow(display)
-    )
-
+    this.secondaryWindows = []
     if (this.getSecondaryWindows().length === 0) {
       // TODO: workaround - remove once
       // https://github.com/electron/electron/issues/2867#issuecomment-264312493 has been resolved

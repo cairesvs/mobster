@@ -4,7 +4,7 @@
   "description": "A cross-platform mob programming timer built on web technologies",
   "main": "main.js",
   "scripts": {
-    "start": "NODE_ENV=dev concurrently --kill-others 'npm run webpack-dev' 'npm run build-node && npm test && electron .'",
+    "start": "NODE_ENV=dev concurrently --kill-others 'npm run webpack-dev' 'npm run build-node && electron .'",
     "startprod": "NODE_ENV=production npm test && npm run build-node && npm run webpack-production && electron .",
     "webpack-dev": "webpack-dev-server --hot --port 8080",
     "webpack-production": "webpack -p --env.production",

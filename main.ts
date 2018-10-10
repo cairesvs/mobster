@@ -191,7 +191,7 @@ function newTransparentOnTopWindow(
 }
 
 function onReady() {
-  app.dock.hide() // needed to support fullscreen mode in OS X, see https://github.com/electron/electron/issues/3302
+  //app.dock.hide() // needed to support fullscreen mode in OS X, see https://github.com/electron/electron/issues/3302
   displayManager = new DisplayManager(
     transparencyDisabled,
     bugsnag,
